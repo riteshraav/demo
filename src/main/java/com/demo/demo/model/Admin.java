@@ -8,7 +8,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collation = "admin")
 @NoArgsConstructor
-@AllArgsConstructor
 @Data
 public class Admin {
     @Id
@@ -16,13 +15,17 @@ public class Admin {
     private String name;
     private String phone;
 
+    public String calculateCustomerId()
+    {
+        return name+_id;
+    }
+
+
     public String get_id() {
         return _id;
     }
 
-    public void set_id(String _id) {
-        this._id = _id;
-    }
+
 
     public String getName() {
         return name;
