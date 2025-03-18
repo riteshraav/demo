@@ -26,6 +26,7 @@ public class Admin {
     }
 
     public void set_id(String _id) {
+        System.out.println("lets make it ");
         this._id = name;
     }
 
