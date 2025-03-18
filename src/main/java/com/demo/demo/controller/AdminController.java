@@ -15,6 +15,7 @@ public class AdminController {
     public void addAdmin(@RequestBody Admin admin)
     {
         Admin temp = new Admin();
+        Admin flag = new Admin();
         temp.set_id(admin.get_id());
         temp.setName(admin.getName());
         temp.setPhone(admin.getPhone());
@@ -23,6 +24,12 @@ public class AdminController {
     }
     @GetMapping("/get/{adminId}")
     public Admin getAdmin(@PathVariable String adminId)
+    {
+
+        return  adminRepo.findById(adminId).orElse(new Admin());
+    }
+    @GetMapping("/get/{adminId}")
+    public Admin justchecking(@PathVariable String adminId)
     {
 
         return  adminRepo.findById(adminId).orElse(new Admin());
