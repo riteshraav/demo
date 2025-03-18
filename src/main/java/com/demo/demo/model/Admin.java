@@ -26,6 +26,7 @@ public class Admin {
     }
 
     public void set_id(String _id) {
+        System.out.println("i am in the rits/constructors");
     }
 
     public String getName() {
