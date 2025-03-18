@@ -25,8 +25,7 @@ public class Admin {
         return _id;
     }
 
-    public void set_id(String _id) {
-    }
+
 
     public String getName() {
         return name;
